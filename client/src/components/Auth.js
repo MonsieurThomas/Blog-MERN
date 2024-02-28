@@ -32,7 +32,7 @@ const Auth = () => {
   };
   const sendRequest = async (type = "login") => {
     try {
-      const res = await axios.post(`http://localhost:5000/api/user/${type}`, {
+      const res = await axios.post(`https://blog-mern-2.onrender.com/api/user/${type}`, {
         name: inputs.name,
         email: inputs.email,
         password: inputs.password,
@@ -59,12 +59,15 @@ const Auth = () => {
         }
       })
     } else {
+      // console.log("this data before = ", data);
       sendRequest()
         .then((data) => {
+          console.log("this data = ", data.user._id);
           if (data) {
+            console.log("this data = ", data);
             localStorage.setItem("userId", data.user._id)
-            .then(() => dispath(authActions.login()))
-            .then(() => naviagte("/blogs"));
+            dispath(authActions.login())
+            naviagte("/blogs");
           }
         })
     }
