@@ -7,7 +7,7 @@ const UserBlogs = () => {
 
   const sendRequest = useCallback(async () => {
     const res = await axios
-    .get(`https://blog-mern-backend-a58w.onrender.com/api/blog/user/${id}`)
+    .get(`https://blog-mern-2-api.onrender.com/api/blog/user/${id}`)
     .catch((err) => console.log(err));
     const data = await res.data;
     return data;
