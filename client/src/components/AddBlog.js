@@ -19,7 +19,7 @@ const AddBlog = () => {
   };
   const sendRequest = async () => {
     const res = await axios
-      .post("https://blog-mern-2.onrender.com/api/blog/add", {
+      .post("https://blog-mern-backend-a58w.onrender.com/api/blog/add", {
         title: inputs.title,
         description: inputs.description,
         image: inputs.imageURL,

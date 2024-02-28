@@ -19,7 +19,7 @@ const BlogDetail = () => {
   };
   const fetchDetails = useCallback(async () => {
     const res = await axios
-      .get(`https://blog-mern-2.onrender.com/api/blog/${id}`)
+      .get(`https://blog-mern-backend-a58w.onrender.com/api/blog/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -35,7 +35,7 @@ const BlogDetail = () => {
   }, [id, fetchDetails]);
   const sendRequest = async () => {
     const res = await axios
-      .put(`https://blog-mern-2.onrender.com/api/blog/update/${id}`, {
+      .put(`https://blog-mern-backend-a58w.onrender.com/api/blog/update/${id}`, {
         title: inputs.title,
         description: inputs.description,
       })

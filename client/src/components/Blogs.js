@@ -6,7 +6,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState();
   const sendRequest = async () => {
     const res = await axios
-      .get("https://blog-mern-2.onrender.com/api/blog")
+      .get("https://blog-mern-backend-a58w.onrender.com/api/blog")
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;

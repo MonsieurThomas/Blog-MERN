@@ -22,7 +22,7 @@ const Blog = ({ title, description, imageURL, userName, isUser, id }) => {
   };
   const deleteRequest = async () => {
     const res = await axios
-      .delete(`https://blog-mern-2.onrender.com/api/blog/${id}`)
+      .delete(`https://blog-mern-backend-a58w.onrender.com/api/blog/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
